@@ -19,13 +19,13 @@ export default function Home() {
                 <div className="lg:text-center">
                     <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">メンター募集</h2>
                     <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                        子どもたちに自由なプログラミング体験を
+                        一緒に子どもたちのプログラミング体験をサポートしませんか？
                     </p>
                     <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
                         CoderDojo枚方は、子どもたちのプログラミングをサポートするメンターを募集しています。
                     </p>
                     <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                        希望の方は、<a href={ zenUrl } target="_blank">こちら</a>よりCoderDojo枚方のメンバーに登録いただき、DMよりご連絡ください。なお、メンターでご協力いただくにあたり、事前にお打ち合わせをさせていただきます。
+                        希望の方は、下記ボタンよりCoderDojo枚方のメンバーに登録いただき、DMよりご連絡ください。なお、メンターでご協力いただくにあたり、事前にお打ち合わせをさせていただきます。
                     </p>
                     <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-center">
 
