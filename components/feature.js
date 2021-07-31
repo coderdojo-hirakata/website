@@ -1,30 +1,30 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
+import {BookOpenIcon, DesktopComputerIcon, StarIcon, UsersIcon} from "@heroicons/react/solid";
 
 const features = [
     {
         name: 'プログラミングワークショップ',
         description:
             '初めての子どもからベテランまで参加できる、無料プログラミングワークショップを運営・開催しています。',
-        icon: GlobeAltIcon,
+        icon: DesktopComputerIcon,
     },
     {
         name: 'メンター',
         description:
             'ワークショップ内で、子どもたちのプログラミングのサポートを行っています。',
-        icon: ScaleIcon,
+        icon: UsersIcon,
     },
     {
         name: '特別ワークショップ',
         description:
             '外部イベントなどで、無料プログラミングワークショップを開催します。',
-        icon: LightningBoltIcon,
+        icon: StarIcon,
     },
     {
         name: '図書貸出',
         description:
             'CoderDojo枚方で所有している書籍を子どもたちに無料で貸し出ししています。',
-        icon: AnnotationIcon,
+        icon: BookOpenIcon,
     },
 ]
 
