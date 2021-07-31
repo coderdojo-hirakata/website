@@ -25,7 +25,7 @@ export default function Home() {
                         CoderDojo枚方は、子どもたちのプログラミングをサポートするメンターを募集しています。
                     </p>
                     <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                        希望の方は、下記ボタンよりCoderDojo枚方のメンバーに登録いただき、DMよりご連絡ください。なお、メンターでご協力いただくにあたり、事前にお打ち合わせをさせていただきます。
+                        希望の方は、下記ボタンよりCoderDojo枚方のメンバーに登録いただき、記載のメールアドレスへご連絡ください。なお、メンターでご協力いただくにあたり、事前にお打ち合わせをさせていただきます。
                     </p>
                     <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-center">
 
