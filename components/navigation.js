@@ -7,7 +7,8 @@ export const zenUrl = "https://zen.coderdojo.com/dojo/jp/ri4-ben3-da4-ban3-fu3-m
 const navigation = [
     { name: '概要', href: '#about' },
     { name: 'メンター募集', href: '#mentor' },
-    { name: '開催場所・参加', href: zenUrl, target: "_blank"},
+    { name: '開催場所', href: zenUrl, target: "_blank"},
+    { name: 'connpass', href: 'ttps://coderdojo-hirakata.connpass.com', target: "_blank"},
 ]
 
 
