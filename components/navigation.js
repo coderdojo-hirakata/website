@@ -29,7 +29,7 @@ export default function Navigation() {
                                             <span className="sr-only">Workflow</span>
                                             <img
                                                 className="h-8 w-auto sm:h-10"
-                                                src="/logo.png"
+                                                src="/logo.svg"
                                             />
                                         </a>
                                         <div className="-mr-2 flex items-center md:hidden">
