@@ -22,7 +22,8 @@ export default function Hero() {
                         <div className="sm:text-center lg:text-left">
                             <h1 className="text-2xl tracking-tight font-extrabold text-gray-900 sm:text-4xl md:text-5xl">
                                 <span className="block xl:inline">こどもたちのための</span>
-                                <span className="block text-indigo-600">無料プログラミングクラブ</span>
+                                <span className="block">無料プログラミングクラブ</span>
+                                <span className="block text-primary">CoderDojo枚方</span>
                             </h1>
                             <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                                 CoderDojo は7〜17歳の子どもを対象にしたプログラミング道場です。世界各国で活動しています。
@@ -32,7 +33,7 @@ export default function Hero() {
                                     <a
                                         href={zenUrl}
                                         target="_blank"
-                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-white hover:text-primary hover:border-primary md:py-4 md:text-lg md:px-10"
                                     >
                                         今すぐ参加
                                     </a>
