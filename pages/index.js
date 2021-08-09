@@ -27,8 +27,8 @@ export default function Home() {
             />
         <Hero />
         { banner() }
-        <Feature />
         <a id="about" />
+        <Feature />
 
 
         <a id="mentor" />

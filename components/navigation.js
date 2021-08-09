@@ -5,8 +5,8 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 export const zenUrl = "https://zen.coderdojo.com/dojo/jp/ri4-ben3-da4-ban3-fu3-mei2-fang1-shi4/hirakata-osaka"
 
 const navigation = [
-    { name: '概要', href: '#about' },
-    { name: 'メンター募集', href: '#mentor' },
+    { name: '概要', href: '/#about' },
+    { name: 'メンター募集', href: '/#mentor' },
     { name: '開催場所', href: zenUrl, target: "_blank"},
     { name: 'connpass', href: 'https://coderdojo-hirakata.connpass.com', target: "_blank"},
 ]
@@ -25,8 +25,8 @@ export default function Navigation() {
                             >
                                 <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                                     <div className="flex items-center justify-between w-full md:w-auto">
-                                        <a href="#">
-                                            <span className="sr-only">Workflow</span>
+                                        <a href="/">
+                                            <span className="sr-only">Home</span>
                                             <img
                                                 className="h-8 w-auto sm:h-10"
                                                 src="/logo.svg"
