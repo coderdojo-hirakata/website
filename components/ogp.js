@@ -11,6 +11,17 @@ export default function Ogp({title, description, imageUrl, imageWidth, imageHeig
     imageHeight = imageHeight ? imageHeight : 533
     return (
             <Head>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77704267-2"></script>
+                <script dangerouslySetInnerHTML={{
+                    __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+
+                            gtag('config', 'UA-77704267-2');
+                            `
+                }} />
+
                 <title>{title}</title>
                 <meta property="og:url" content={baseUrl + router.pathname}/>
                 <meta property="og:title" content={title}/>
