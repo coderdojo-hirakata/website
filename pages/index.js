@@ -4,13 +4,13 @@ import Feature from "../components/feature";
 import {zenUrl} from "../components/navigation";
 import useSWR from 'swr'
 import EventBanner from "../components/eventBanner";
+import Ogp from "../components/ogp";
 
 const date = new Date()
 const fetcher = (url) => fetch(url).then((res => res.json()))
 
 export default function Home() {
     const url = '/api/events?orderBy=startTime&page=1&pageSize=1&query%5Bstatus%5D=published&query%5BafterDate%5D=' + date.getTime() + '&query%5ButcOffset%5D=9'
-    console.log(url)
     const { data, error } = useSWR(url, fetcher)
     const banner = () => {
         if (!data || data.total === 0) {
@@ -21,6 +21,10 @@ export default function Home() {
     }
   return (
     <div >
+        <Ogp
+            title={'Home | CoderDojo Hirakata'}
+            description={'子ども向け無料プログラミングクラブ、CoderDojo HirakataのWebサイトです'}
+            />
         <Hero />
         { banner() }
         <Feature />
