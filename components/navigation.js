@@ -8,7 +8,7 @@ const navigation = [
     { name: '概要', href: '#about' },
     { name: 'メンター募集', href: '#mentor' },
     { name: '開催場所', href: zenUrl, target: "_blank"},
-    { name: 'connpass', href: 'ttps://coderdojo-hirakata.connpass.com', target: "_blank"},
+    { name: 'connpass', href: 'https://coderdojo-hirakata.connpass.com', target: "_blank"},
 ]
 
 
