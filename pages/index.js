@@ -1,14 +1,28 @@
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Hero from "../components/hero";
 import Feature from "../components/feature";
 import {zenUrl} from "../components/navigation";
+import useSWR from 'swr'
+import EventBanner from "../components/eventBanner";
+
+const date = new Date()
+const fetcher = (url) => fetch(url).then((res => res.json()))
 
 export default function Home() {
+    const url = '/api/events?orderBy=startTime&page=1&pageSize=1&query%5Bstatus%5D=published&query%5BafterDate%5D=' + date.getTime() + '&query%5ButcOffset%5D=9'
+    console.log(url)
+    const { data, error } = useSWR(url, fetcher)
+    const banner = () => {
+        if (!data || data.total === 0) {
+            return ""
+        }
+        const event = data.results[0]
+        return (<EventBanner title={ event.name} date={ event.startTime } />)
+    }
   return (
     <div >
         <Hero />
-
+        { banner() }
         <Feature />
         <a id="about" />
 
