@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import Navigation, {zenUrl} from "./navigation";
+import Navigation, {connpassUrl} from "./navigation";
 
 export default function Hero() {
     return (
@@ -31,7 +31,7 @@ export default function Hero() {
                             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                 <div className="rounded-md shadow">
                                     <a
-                                        href={zenUrl}
+                                        href={connpassUrl}
                                         target="_blank"
                                         className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-white hover:text-primary hover:border-primary md:py-4 md:text-lg md:px-10"
                                     >

@@ -12,12 +12,13 @@
     "@heroicons/react": "^1.0.3",
     "autoprefixer": "^10.3.1",
     "cors": "^2.8.5",
-    "next": "10.x",
+    "dayjs": "^1.11.7",
+    "next": "13.x",
     "next-connect": "^0.10.2",
     "postcss": "^8.3.6",
-    "react": "17.x",
-    "react-dom": "17.x",
-    "swr": "^0.5.6",
+    "react": "18.x",
+    "react-dom": "18.x",
+    "swr": "^2.0.0",
     "tailwindcss": "^2.2.7"
   }
 }
