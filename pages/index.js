@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css'
 import Hero from "../components/hero";
 import Feature from "../components/feature";
-import {zenUrl} from "../components/navigation";
+import {connpassUrl} from "../components/navigation";
 import useSWR from 'swr'
 import EventBanner from "../components/eventBanner";
 import Ogp from "../components/ogp";
@@ -10,14 +10,14 @@ const date = new Date()
 const fetcher = (url) => fetch(url).then((res => res.json()))
 
 export default function Home() {
-    const url = '/api/events?orderBy=startTime&page=1&pageSize=1&query%5Bstatus%5D=published&query%5BafterDate%5D=' + date.getTime() + '&query%5ButcOffset%5D=9'
+    const url = '/api/events'
     const { data, error } = useSWR(url, fetcher)
     const banner = () => {
         if (!data || data.total === 0) {
             return ""
         }
-        const event = data.results[0]
-        return (<EventBanner title={ event.name} date={ event.startTime } />)
+        const event = data.events[0]
+        return (<EventBanner title={ event.title} date={ event.started_at } url={ event.event_url } />)
     }
   return (
     <div >
@@ -49,7 +49,7 @@ export default function Home() {
 
                         <div className="rounded-md shadow">
                             <a
-                                href={zenUrl}
+                                href={connpassUrl}
                                 target="_blank"
                                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-white hover:text-primary hover:border-primary md:py-4 md:text-lg md:px-10"
                             >

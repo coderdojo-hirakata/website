@@ -3,6 +3,7 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 export const zenUrl = "https://zen.coderdojo.com/dojo/jp/ri4-ben3-da4-ban3-fu3-mei2-fang1-shi4/hirakata-osaka"
+export const connpassUrl = "https://coderdojo-hirakata.connpass.com"
 
 const navigation = [
     { name: '概要', href: '/#about' },

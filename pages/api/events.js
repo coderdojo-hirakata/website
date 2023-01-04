@@ -1,8 +1,9 @@
 import nc from "next-connect";
 import cors from "cors";
+import dayjs from "dayjs";
 
-const date = new Date()
-const remoteServerUrl = 'https://zen.coderdojo.com/api/3.0/dojos/54fb4603-de0d-4de1-9fd9-518c5127caaa/events?orderBy=startTime&page=1&pageSize=1&query%5Bstatus%5D=published&query%5BafterDate%5D=' + Math.floor(date.getTime() / 1000) + '&query%5ButcOffset%5D=9'
+const date = dayjs();
+const remoteServerUrl = 'https://connpass.com/api/v1/event/?series_id=2248&count=1ym=' + date.format("YYYYMM") + ',' + date.add(1, 'month').format("YYYYMM")
 
 const config = {
     mode: 'no-cors',
