@@ -7,6 +7,7 @@ export const connpassUrl = "https://coderdojo-hirakata.connpass.com"
 
 const navigation = [
     { name: '概要', href: '/#about' },
+    { name: 'FAQ', href: '/#faq'},
     { name: 'メンター募集', href: '/#mentor' },
     { name: '開催場所', href: zenUrl, target: "_blank"},
     { name: 'connpass', href: 'https://coderdojo-hirakata.connpass.com', target: "_blank"},
