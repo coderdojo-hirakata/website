@@ -5,6 +5,8 @@ import {connpassUrl} from "../components/navigation";
 import useSWR from 'swr'
 import EventBanner from "../components/eventBanner";
 import Ogp from "../components/ogp";
+import Footer from "../components/footer";
+import Faq from "../components/faq";
 
 const date = new Date()
 const fetcher = (url) => fetch(url).then((res => res.json()))
@@ -30,7 +32,8 @@ export default function Home() {
         <a id="about" />
         <Feature />
 
-
+        <a id="faq" />
+        <Faq></Faq>
         <a id="mentor" />
         <div className="py-12 bg-white mt-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,17 +63,7 @@ export default function Home() {
                 </div>
             </div>
         </div>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <Footer></Footer>
     </div>
   )
 }
