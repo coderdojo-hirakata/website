@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css'
 import Hero from "../components/hero";
 import Feature from "../components/feature";
-import {connpassUrl} from "../components/navigation";
+import {connpassUrl, contactUrl} from "../components/navigation";
 import useSWR from 'swr'
 import EventBanner from "../components/eventBanner";
 import Ogp from "../components/ogp";
@@ -52,7 +52,7 @@ export default function Home() {
 
                         <div className="rounded-md shadow">
                             <a
-                                href={connpassUrl}
+                                href={contactUrl}
                                 target="_blank"
                                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-white hover:text-primary hover:border-primary md:py-4 md:text-lg md:px-10"
                             >

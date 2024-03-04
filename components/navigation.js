@@ -2,15 +2,18 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
-export const zenUrl = "https://zen.coderdojo.com/dojo/jp/ri4-ben3-da4-ban3-fu3-mei2-fang1-shi4/hirakata-osaka"
+export const zenUrl = "https://coderdojo.com/en/dojos/jp/ri4-ben3-da4-ban3-fu3-mei2-fang1-shi4/hirakata-osaka"
 export const connpassUrl = "https://coderdojo-hirakata.connpass.com"
 
+export const contactUrl = "mailto:hirakata.osaka.jp@coderdojo.com"
+
 const navigation = [
-    { name: '概要', href: '/#about' },
+    { name: 'About', href: '/#about' },
     { name: 'FAQ', href: '/#faq'},
-    { name: 'メンター募集', href: '/#mentor' },
-    { name: '開催場所', href: zenUrl, target: "_blank"},
+    { name: 'Mentor', href: '/#mentor' },
+    { name: 'Zen', href: zenUrl, target: "_blank"},
     { name: 'connpass', href: 'https://coderdojo-hirakata.connpass.com', target: "_blank"},
+    { name: 'Contact', href: contactUrl},
 ]
 
 
