@@ -5,6 +5,7 @@ import {connpassUrl} from "../components/navigation";
 import useSWR from 'swr'
 import EventBanner from "../components/eventBanner";
 import Ogp from "../components/ogp";
+import NoteList from "../components/noteList";
 
 const date = new Date()
 const fetcher = (url) => fetch(url).then((res => res.json()))
@@ -60,6 +61,9 @@ export default function Home() {
                 </div>
             </div>
         </div>
+
+        <a id="blog" />
+        <NoteList />
 
       <footer className={styles.footer}>
         <a
