@@ -25,25 +25,32 @@ export default function NoteList() {
                 // 記事アイテムを取得
                 const items = xmlDoc.querySelectorAll('item');
                 
-                // 記事データを整形
-                const parsedNotes = Array.from(items).map(item => {
-                    // 必要なデータを抽出
-                    const title = item.querySelector('title')?.textContent || '';
-                    const link = item.querySelector('link')?.textContent || '';
-                    const pubDate = item.querySelector('pubDate')?.textContent || '';
-                    const description = item.querySelector('description')?.textContent || '';
-                    
-                    // 日付をフォーマット
-                    const date = new Date(pubDate);
-                    const formattedDate = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
-                    
-                    return {
-                        title,
-                        link,
-                        pubDate: formattedDate,
-                        description
-                    };
-                });
+                // 今年の年を取得
+                const currentYear = new Date().getFullYear();
+                
+                // 記事データを整形し、今年のデータのみをフィルタリング
+                const parsedNotes = Array.from(items)
+                    .map(item => {
+                        // 必要なデータを抽出
+                        const title = item.querySelector('title')?.textContent || '';
+                        const link = item.querySelector('link')?.textContent || '';
+                        const pubDate = item.querySelector('pubDate')?.textContent || '';
+                        const description = item.querySelector('description')?.textContent || '';
+                        
+                        // 日付を解析
+                        const date = new Date(pubDate);
+                        const formattedDate = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+                        
+                        return {
+                            title,
+                            link,
+                            date, // 元の日付オブジェクトを保持
+                            pubDate: formattedDate,
+                            description
+                        };
+                    })
+                    // 今年の投稿のみをフィルタリング
+                    .filter(note => note.date.getFullYear() === currentYear);
                 
                 setNotes(parsedNotes);
                 setLoading(false);
@@ -71,25 +78,31 @@ export default function NoteList() {
                 <div className="lg:text-center mb-10">
                     <h2 className="text-base text-primary font-semibold tracking-wide uppercase">ブログ</h2>
                     <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                        最新の記事
+                        {new Date().getFullYear()}年の記事
                     </p>
                 </div>
                 
                 <div className="mt-10">
-                    <ul className="space-y-8">
-                        {notes.map((note, index) => (
-                            <li key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <a href={note.link} target="_blank" rel="noopener noreferrer" className="block">
-                                    <h3 className="text-xl font-semibold text-gray-900 hover:text-primary transition-colors duration-300">{note.title}</h3>
-                                    <time className="block text-sm text-gray-500 mt-1">{note.pubDate}</time>
-                                    <div className="mt-3 text-gray-700 line-clamp-3" dangerouslySetInnerHTML={{ __html: note.description }}></div>
-                                    <div className="mt-4 flex justify-end">
-                                        <span className="text-primary font-medium">続きを読む →</span>
-                                    </div>
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
+                    {notes.length > 0 ? (
+                        <ul className="space-y-8">
+                            {notes.map((note, index) => (
+                                <li key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                                    <a href={note.link} target="_blank" rel="noopener noreferrer" className="block">
+                                        <h3 className="text-xl font-semibold text-gray-900 hover:text-primary transition-colors duration-300">{note.title}</h3>
+                                        <time className="block text-sm text-gray-500 mt-1">{note.pubDate}</time>
+                                        <div className="mt-3 text-gray-700 line-clamp-3" dangerouslySetInnerHTML={{ __html: note.description }}></div>
+                                        <div className="mt-4 flex justify-end">
+                                            <span className="text-primary font-medium">続きを読む →</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <div className="text-center py-10 text-gray-500">
+                            {new Date().getFullYear()}年の記事はまだありません。
+                        </div>
+                    )}
                     
                     <div className="mt-10 text-center">
                         <a 
