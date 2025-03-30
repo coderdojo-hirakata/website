@@ -1,11 +1,13 @@
 import styles from '../styles/Home.module.css'
 import Hero from "../components/hero";
 import Feature from "../components/feature";
-import {connpassUrl} from "../components/navigation";
+import {connpassUrl, contactUrl} from "../components/navigation";
 import useSWR from 'swr'
 import EventBanner from "../components/eventBanner";
 import Ogp from "../components/ogp";
 import NoteList from "../components/noteList";
+import Footer from "../components/footer";
+import Faq from "../components/faq";
 
 const date = new Date()
 const fetcher = (url) => fetch(url).then((res => res.json()))
@@ -31,7 +33,8 @@ export default function Home() {
         <a id="about" />
         <Feature />
 
-
+        <a id="faq" />
+        <Faq></Faq>
         <a id="mentor" />
         <div className="py-12 bg-white mt-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,7 +53,7 @@ export default function Home() {
 
                         <div className="rounded-md shadow">
                             <a
-                                href={connpassUrl}
+                                href={contactUrl}
                                 target="_blank"
                                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-white hover:text-primary hover:border-primary md:py-4 md:text-lg md:px-10"
                             >
@@ -75,6 +78,7 @@ export default function Home() {
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
+        <Footer></Footer>
     </div>
   )
 }
