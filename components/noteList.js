@@ -25,10 +25,7 @@ export default function NoteList() {
                 // 記事アイテムを取得
                 const items = xmlDoc.querySelectorAll('item');
                 
-                // 今年の年を取得
-                const currentYear = new Date().getFullYear();
-                
-                // 記事データを整形し、今年のデータのみをフィルタリング
+                // 記事データを整形
                 const parsedNotes = Array.from(items)
                     .map(item => {
                         // 必要なデータを抽出
@@ -49,8 +46,10 @@ export default function NoteList() {
                             description
                         };
                     })
-                    // 今年の投稿のみをフィルタリング
-                    .filter(note => note.date.getFullYear() === currentYear);
+                    // 日付で降順ソート（新しい順）
+                    .sort((a, b) => b.date - a.date)
+                    // 最新5件を取得
+                    .slice(0, 5);
                 
                 setNotes(parsedNotes);
                 setLoading(false);
@@ -78,7 +77,7 @@ export default function NoteList() {
                 <div className="lg:text-center mb-10">
                     <h2 className="text-base text-primary font-semibold tracking-wide uppercase">ブログ</h2>
                     <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                        {new Date().getFullYear()}年の記事
+                        最新の記事
                     </p>
                 </div>
                 
@@ -100,7 +99,7 @@ export default function NoteList() {
                         </ul>
                     ) : (
                         <div className="text-center py-10 text-gray-500">
-                            {new Date().getFullYear()}年の記事はまだありません。
+                            記事はまだありません。
                         </div>
                     )}
                     
