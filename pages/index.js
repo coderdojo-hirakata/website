@@ -20,7 +20,7 @@ export default function Home() {
             return ""
         }
         const event = data.events[0]
-        return (<EventBanner title={ event.title} date={ event.started_at } url={ event.event_url } />)
+        return (<EventBanner title={ event.title} date={ event.started_at } url={ event.url } />)
     }
   return (
     <div >
