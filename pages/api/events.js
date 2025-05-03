@@ -3,12 +3,13 @@ import cors from "cors";
 import dayjs from "dayjs";
 
 const date = dayjs();
-const remoteServerUrl = 'https://connpass.com/api/v1/event/?series_id=2248&count=1ym=' + date.format("YYYYMM") + ',' + date.add(1, 'month').format("YYYYMM")
+const remoteServerUrl = 'https://connpass.com/api/v2/events/?group_id=2248&count=1ym=' + date.format("YYYYMM") + ',' + date.add(1, 'month').format("YYYYMM")
 
 const config = {
     mode: 'no-cors',
     headers: {
-        Accept: "application/json"
+        Accept: "application/json",
+        "X-API-KEY": process.env.CONNPASS_API_KEY || ""
     }
 }
 
