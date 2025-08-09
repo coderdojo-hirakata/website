@@ -3,7 +3,7 @@ import cors from "cors";
 import dayjs from "dayjs";
 
 const date = dayjs();
-const remoteServerUrl = 'https://connpass.com/api/v2/events/?group_id=2248&count=1ym=' + date.format("YYYYMM") + ',' + date.add(1, 'month').format("YYYYMM")
+const remoteServerUrl = 'https://connpass.com/api/v2/events?group_id=2248&order=3&count=1'
 
 const config = {
     mode: 'no-cors',
