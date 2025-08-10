@@ -73,14 +73,18 @@ export default class Faq extends Component {
                             よくあるご質問
                         </p>
                         {questions.map((q) => (
-                            <div className="sm:flex items-start mt-10">
+                            <div key={q.section} className="sm:flex items-start mt-10">
 
                                 <h3 className="py-3 font-bold text-lg text-gray-900 w-2/12">
                                     {q.section}
                                 </h3>
                                 <div className="w-10/12 text-left">
                                     {q.questions.map((question) => (
-                                        <QAndA question={question.question} answer={question.answer}/>
+                                        <QAndA
+                                            key={question.question}
+                                            question={question.question}
+                                            answer={question.answer}
+                                        />
                                     ))}
                                 </div>
                             </div>
