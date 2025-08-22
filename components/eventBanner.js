@@ -1,5 +1,5 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { SpeakerphoneIcon, XIcon } from '@heroicons/react/outline'
+/* This example requires Tailwind CSS v4.0+ */
+import { MegaphoneIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import {Component} from "react";
 import {zenUrl} from "./navigation";
 
@@ -20,7 +20,7 @@ class EventBanner extends Component {
                     <div className="flex items-center justify-between flex-wrap">
                         <div className="w-0 flex-1 flex items-center">
             <span className="flex p-2 rounded-lg bg-primary border-white border-2">
-              <SpeakerphoneIcon className="h-6 w-6 text-white" aria-hidden="true" />
+              <MegaphoneIcon className="h-6 w-6 text-white" aria-hidden="true" />
             </span>
                             <p className="ml-3 font-medium text-white truncate">
                                 <span className="md:hidden">{ formattedDate + 'に『' + this.props.title + '』を開催！'}</span>
@@ -43,7 +43,7 @@ class EventBanner extends Component {
                                 className="-mr-1 flex p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2"
                             >
                                 <span className="sr-only">Dismiss</span>
-                                <XIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                                <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
                             </button>
                         </div>
                     </div>

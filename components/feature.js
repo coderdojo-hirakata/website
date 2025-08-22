@@ -1,12 +1,12 @@
-/* This example requires Tailwind CSS v2.0+ */
-import {BookOpenIcon, DesktopComputerIcon, StarIcon, UsersIcon} from "@heroicons/react/solid";
+/* This example requires Tailwind CSS v4.0+ */
+import {BookOpenIcon, ComputerDesktopIcon, StarIcon, UsersIcon} from "@heroicons/react/24/solid";
 
 const features = [
     {
         name: 'プログラミングワークショップ',
         description:
             '初めての子どもからベテランまで参加できる、無料プログラミングワークショップを運営・開催しています。',
-        icon: DesktopComputerIcon,
+        icon: ComputerDesktopIcon,
     },
     {
         name: 'メンター',
